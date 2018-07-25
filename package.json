@@ -1,0 +1,23 @@
+{
+  "name": "military-duty-calc",
+  "version": "1.0.0",
+  "description": "군복무 계산기",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taewan-P/military-duty-calc.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Taewan-P/military-duty-calc/issues"
+  },
+  "homepage": "https://github.com/Taewan-P/military-duty-calc#readme",
+  "devDependencies": {
+    "electron": "^2.0.5"
+  }
+}
