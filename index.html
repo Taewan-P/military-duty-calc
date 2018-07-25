@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>군 전역 계산기</title>
-  </head>
-  <body>
-    <h1>HTML 테스트</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    <!-- We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>. -->
-
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Military Duty Calcurator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="hayeong">
+    <meta name="description" content="Calcurate a date of user's discharge">
+    <meta name="copyright" content="BSD-3-Clause">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <script src="index.js"></script> -->
+    <title>jQuery UI Datepicker - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
+    $( function() {
+    $( "#datepicker" ).datepicker();
+    } );  
     </script>
-  </body>
+</head>
+<body>
+    <div clas="main_title" align="center">
+            <header>
+                <h1>당신의 입대 날짜를 적어주세요.</h1>
+            </header>
+        </div>
+    <div id="selection">
+            <p>Date: <input type="text" id="datepicker"></p>
+            <select>
+                <option value="">군별선택</option>
+                <option value="army">육군/의경</option>
+                <option value="navy">해군/해양의무경찰</option>
+                <option value="airforce">공군</option>
+                <option value="marine">해병</option>
+                <option value="society">사회복무요원</option>
+                <option value="firefight">의무소방</option>            
+            </select>
+        </div>
+    <script>
+        document.getElementById("test").addEventListener("click", function(e){
+            this.value='';
+        });         
+    </script>
+</body>
 </html>
