@@ -22,13 +22,12 @@
     </script>
 </head>
 <body>
-    <div clas="main_title" align="center">
+    <div class="main_title" align="center">
             <header>
                 <h1>당신의 입대 날짜를 적어주세요.</h1>
             </header>
-        </div>
+    </div>
     <div id="selection">
-            <p>Date: <input type="text" id="datepicker"></p>
             <select>
                 <option value="">군별선택</option>
                 <option value="army">육군/의경</option>
@@ -38,11 +37,8 @@
                 <option value="society">사회복무요원</option>
                 <option value="firefight">의무소방</option>            
             </select>
-        </div>
-    <script>
-        document.getElementById("test").addEventListener("click", function(e){
-            this.value='';
-        });         
-    </script>
+            <p>Date: <input type="text" id="datepicker"></p>
+            <input type="button" name="submit" onclick="window.location.href='result.html';" value="계속">
+    </div>
 </body>
 </html>

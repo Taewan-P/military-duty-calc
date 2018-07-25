@@ -1,0 +1,51 @@
+body {
+    margin-top: 12%;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+html {
+    background: url('img/bg1.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+/* index.html */
+.main_title {
+    font-size: 28px;
+    padding-block-start: 20px;
+    padding-bottom: 20px;
+}
+
+/* result.html */
+#military_shortened_0 {
+    height: 250px;
+    margin: 50px auto;
+    flex-direction: row;
+    float: left;
+    width: 30%;
+    margin: 20px;
+}
+
+#military_shortened_1 {
+    height: 250px;
+    margin: 50px auto;
+    flex-direction: row;
+    float: left;
+    width: 30%;
+    margin: 20px;
+}
+
+#military_shortened_2 {
+    height: 250px;
+    margin: 50px auto;
+    flex-direction: row;
+    float: left;
+    width: 30%;
+    margin: 20px;
+}
