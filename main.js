@@ -1,7 +1,7 @@
 const {app, BrowserWindow} = require('electron')
 
 function createWindow () {
-    win = new BrowserWindow({width: 800, height: 600})
+    win = new BrowserWindow({width: 1000, height: 800, resizable: false})
 
     win.loadFile('index.html')
     
@@ -12,7 +12,7 @@ function createWindow () {
 app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
+    if (process.platform == 'darwin') {
       app.quit()
     }
   })

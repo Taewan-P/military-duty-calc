@@ -53,7 +53,7 @@
                     
                 }
 
-                else if($('#army_select').val() == 'none'){
+                else if($('#army_select option:selected').val() == 'none'){
                     alert("군별을 입력하세요!");
                 }
 
@@ -80,7 +80,7 @@
     <div id="selection">
         <form mehtod='get' action="result.html" name="input_form">
             <p>날짜: <input type="text" id="Datepicker" readonly="true" autocomplete="off" name='date'></p>
-            <select id="amry_select" name='army_select'>
+            <select id="army_select" name='army_select'>
                 <option value="none" selected="selected">군별선택</option>
                 <option value="army">육군/의경</option>
                 <option value="navy">해군/해양의무경찰</option>
