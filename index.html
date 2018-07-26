@@ -10,27 +10,78 @@
     <meta name="copyright" content="BSD-3-Clause">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <!-- <script src="index.js"></script> -->
-    <title>jQuery UI Datepicker - Default functionality</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- jQuery UI CSS파일 -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <!-- jQuery 기본 js파일 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <!-- jQuery UI 라이브러리 js파일 -->
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
     <script>
-    $( function() {
-    $( "#datepicker" ).datepicker();
-    } );  
+        window.onload = () => {
+            $(function() {
+                $( "#Datepicker" ).datepicker({
+                    dateFormat: "yy/mm/dd",
+                    showOtherMonths: true,
+                });
+            });
+            function buttonClick() {
+                var datepick = document.getElementById("Datepicker").val();
+                var army_select = document.getElementById("army_select").val();
+
+                if (!datepick) { alert("날짜를 입력하세요"); } 
+                else if (army_select == "") { alert("군별을 선택하세요"); }
+                else {
+                    window.location.href='result.html';
+                }
+            }
+        }
     </script>
 </head>
 <body>
-    <div clas="main_title" align="center">
+    <script>
+        
+            $(function() {
+                $( "#Datepicker" ).datepicker({
+                    dateFormat: "yy/mm/dd",
+                    showOtherMonths: true,
+                });
+            });
+
+            function buttonClick() {
+                if($('#Datepicker').val() == ""){
+                    alert("날짜를 입력하세요!");
+                    
+                }
+
+                else if($('#army_select').val() == 'none'){
+                    alert("군별을 입력하세요!");
+                }
+
+                else{
+                    $('input_form').submit();
+                }
+
+                // var datepick = $("#Datepicker").val();
+                // var army_select = $("#army_select").val();
+
+                // if (datepick == "") { alert("날짜를 입력하세요"); } 
+                // else if (army_select == "null") { alert("군별을 선택하세요"); }
+                // else {
+                //     window.location.href='result.html';
+                // }
+            }
+        
+    </script>
+    <div class="main_title" align="center">
             <header>
                 <h1>당신의 입대 날짜를 적어주세요.</h1>
             </header>
-        </div>
+    </div>
     <div id="selection">
-            <p>Date: <input type="text" id="datepicker"></p>
-            <select>
-                <option value="">군별선택</option>
+        <form mehtod='get' action="result.html" name="input_form">
+            <p>날짜: <input type="text" id="Datepicker" readonly="true" autocomplete="off" name='date'></p>
+            <select id="amry_select" name='army_select'>
+                <option value="none" selected="selected">군별선택</option>
                 <option value="army">육군/의경</option>
                 <option value="navy">해군/해양의무경찰</option>
                 <option value="airforce">공군</option>
@@ -38,11 +89,8 @@
                 <option value="society">사회복무요원</option>
                 <option value="firefight">의무소방</option>            
             </select>
+            <input id="continue" type="button" name="submit" onclick="javascript:buttonClick();" value="계속">
+        </form>
         </div>
-    <script>
-        document.getElementById("test").addEventListener("click", function(e){
-            this.value='';
-        });         
-    </script>
 </body>
 </html>
