@@ -1,0 +1,19 @@
+<html>
+   <body>
+      <form action = "http://localhost:5000/submit" method = "post">
+         <p>입영일을 입력해주세요:</p>
+         <p><input type = "text" name = "date" /></p>
+          <select name="military type">
+                <option>군별선택</option>
+                <option>육군/의경</option>
+                <option>해군/해양의무경찰</option>
+                <option>공군</option>
+                <option>해병</option>
+                <option>사회복무요원</option>
+                <option>의무소방</option>
+          </select>
+          <p><input type = "submit" value = "submit" /></p>
+      </form>
+      <p>올바르지 않은 날짜입니다. 다시 입력해주세요</p>
+   </body>
+</html>

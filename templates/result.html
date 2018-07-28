@@ -1,0 +1,23 @@
+<html>
+   <body>
+
+      <form action = "http://localhost:5000/submit" method = "post">
+         <p>입영일을 입력해주세요:</p>
+         <p><input type = "text" name = "date" /></p>
+          <select name="military type">
+                <option>군별선택</option>
+                <option>육군/의경</option>
+                <option>해군/해양의무경찰</option>
+                <option>공군</option>
+                <option>해병</option>
+                <option>사회복무요원</option>
+                <option>의무소방</option>
+          </select>
+          <p><input type = "submit" value = "submit" /></p>
+          <p>당신은 {{ result }}개월간 복무해야 하며, {{year}}년 {{month}}월 {{day}}일 전역 예정입니다</p>
+          <progress value="{{percent}}" max="100"></progress>
+          <p>당신은 {{ total_day }}일 중 {{remain_day}}일을 복무했으며 총 {{percent}}%의 진행률을 가집니다.</p>
+          <p>(2016년 9월 15일부터 2주씩 단축됬을 때) {{shorten_days}}일 단축되며, {{shorten_year}}년 {{shorten_month}}월 {{shorten_day}}일 전역 예정입니다</p>
+      </form>
+   </body>
+</html>
