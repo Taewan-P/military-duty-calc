@@ -19,7 +19,7 @@ Electron으로 만든 군 복무 계산기입니다.
 
 ## 다운로드
 
-여기 있는 [링크](https://raw.githubusercontent.com/Taewan-P/military-duty-calc/master/app/military-duty-calc.zip) 에서 받을 수 있습니다.
+여기 있는 [링크](https://drive.google.com/uc?export=download&confirm=Jmd1&id=16mizlX3GEWXcPaasMMdaP93ponhKG9to) 에서 받을 수 있습니다.
 
 현재는 mac 버전만 배포하고 있습니다.
 
