@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Taewan-P/military-duty-calc#readme",
   "devDependencies": {
-    "electron": "^2.0.5",
+    "electron": "^2.0.8",
     "electron-packager": "^12.1.0"
   },
   "dependencies": {
